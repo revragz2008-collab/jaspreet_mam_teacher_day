@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaspreet Ma'am - Celebration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="teacher-page theme-jaspreet">
+    <audio id="teacher-song" autoplay loop><source src="teacher-song.mp3" type="audio/mpeg"></audio>
+    <button id="music-toggle" class="music-btn">🔊</button>
+    <div class="bg-decor">
+        <span class="floating-emoji" style="top: 8%; left: 8%; font-size: 2.8rem;">❤️</span>
+        <span class="floating-emoji" style="top: 40%; right: 12%; font-size: 3rem;">✨</span>
+        <span class="floating-emoji" style="top: 70%; left: 15%; font-size: 2.8rem;">👑</span>
+    </div>
+    <div class="home-container" style="padding-top: 30px;">
+        <div class="t-container">
+            <div class="t-header"><h4>✦ TEACHERS' DAY 2026 ✦</h4></div>
+            <div class="profile-wrapper">
+                <img src="images/jaspreet.jpg" class="teacher-img" alt="Jaspreet Ma'am" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="img-fallback" style="display:none;">JM</div>
+            </div>
+            <div class="t-titles" style="margin-top: 15px;">
+                <h1>Jaspreet Ma'am</h1>
+                <p class="subject">Business Studies</p>
+                <p class="p-title">❤️ The Teacher Who Always Believes</p>
+            </div>
+            <div class="message-card">
+                <h5>A MESSAGE FOR YOU</h5>
+                <div class="message-body">
+                    <p>Dear Ma'am,</p><br>
+                    <p>Your kindness, warmth, and constant belief in us mean more than words can express. Your constant encouragement gives us the ultimate confidence to push forward.</p><br>
+                    <p>You care for us with pure affection while keeping classes lively and engaging. Thank you for always supporting us!</p>
+                    <div class="quote-highlight">"Sometimes one teacher's belief becomes a student's reason to shine."</div>
+                    <div class="small-highlight">❤️ Kindness • Belief • Encouragement</div>
+                </div>
+                <div class="t-footer"><p>Thank you for being you.</p><p>With gratitude & respect ❤️</p></div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #a7f3d0; font-size: 0.9rem; text-decoration: underline;">← Back to Home</a></div>
+        </div>
+        <footer class="footer"><p>Army Public School Miran Sahib</p><p>Made with ❤️ by Raghav</p></footer>
+    </div>
+    <script>
+        const song = document.getElementById("teacher-song");
+        const toggleBtn = document.getElementById("music-toggle");
+        let playing = true;
+        song.volume = 0.7;
+        toggleBtn.addEventListener("click", () => {
+            if (playing) { song.pause(); toggleBtn.classList.add("muted"); toggleBtn.innerText = "🔇"; playing = false; }
+            else { song.play(); toggleBtn.classList.remove("muted"); toggleBtn.innerText = "🔊"; playing = true; }
+        });
+    </script>
+</body>
+</html>
